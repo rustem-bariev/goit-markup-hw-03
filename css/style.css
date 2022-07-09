@@ -1,197 +1,338 @@
-:root{
-/* color */
---color-main-blue:#2196F3;
---color-grey-text: #757575;
---color-black-text: #212121;
---color-white-text: #FFFFFF;
---color-grey-footer-text: rgba(255, 255, 255, 0.6);
---color-grey-bgn:#2F303A;
---color-grey-button:#F5F4FA;
---color-logo-black:#000000;
-/* font */
---main-font-family:'Roboto', sans-serif;
---second-font-family:'Raleway', sans-serif;
+:root {
+  /* color */
+  --color-main-blue: #2196f3;
+  --color-grey-text: #757575;
+  --color-black-text: #212121;
+  --color-white-text: #ffffff;
+  --color-grey-footer-text: rgba(255, 255, 255, 0.6);
+  --color-grey-bgn: #2f303a;
+  --color-grey-button: #f5f4fa;
+  --color-logo-black: #000000;
+  /* font */
+  --main-font-family: 'Roboto', sans-serif;
+  --second-font-family: 'Raleway', sans-serif;
 }
-
+/* ------------------------------- base styles ------------------------------ */
+img{display: block;}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ---------------------------------- reset --------------------------------- */
-.list{list-style: none;}
-.link{text-decoration: none;
-color:currentColor;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------------- Body ---------------------------------- */
-body{
-font-family:var(--main-font-family);
-font-size: 14px;
-line-height: calc(24 / 14);
-letter-spacing: 0.03em;
-color: var(--color-grey-text)
+body {
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--color-grey-text);
 }
 /* -------------------------------------------------------------------------- */
 
 /* ---------------------------------- LOGO ---------------------------------- */
-.logo{
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: var(--color-main-blue);
-    font-family: var(--second-font-family);}
-.logo-cl-black{
-    color: var(--color-logo-black);
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--color-main-blue);
+  font-family: var(--second-font-family);
 }
-.logo-cl-white{
-    color: var(--color-white-text);
+.logo-cl-black {
+  color: var(--color-logo-black);
+}
+.logo-cl-white {
+  color: var(--color-white-text);
 }
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- Header Section ----------------------------- */
-.nav-list{
-    color:var(--color-black-text)
+.header{  border: 1px solid #ECECEC}
+.header-list-gap {
+  gap: 50px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+
+}
+.nav-logo {
+  margin-right: 93px;
+}
+.nav-list {
+  display: flex;
+  color: var(--color-black-text);
+  margin-right: auto;
+}
+.contact-list {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nav-link,
-.contact-link{
-font-weight: 500;
-line-height: calc(16 / 14);
-letter-spacing: 0.02em;
+.contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
 }
+
 .link-effect:hover,
-.link-effect:focus{
-    color: var(--color-main-blue);
+.link-effect:focus {
+  color: var(--color-main-blue);
 }
-.list .link.current{
-    color: var(--color-main-blue);
+.list .link.current {
+  color: var(--color-main-blue);
 }
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------ Hero Section ------------------------------ */
-.hero{
-    background-color: var(--color-grey-bgn);
-    text-align: center;
+.hero {
+  background-color: var(--color-grey-bgn);
+  align-items: center;
 }
-.hero-title{
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color:var(--color-white-text);
+.hero-container {
+  padding: 200px 0;
 }
-.hero-button{
-    font-family: var(--main-font-family);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.36;
-    color: var(--color-white-text);
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
-    background-color: var(--color-main-blue);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
+.hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 700px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white-text);
+}
+.hero-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  background-color: var(--color-main-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.36;
+  color: var(--color-white-text);
+  cursor: pointer;
 }
 /* -------------------------------------------------------------------------- */
 
 /* --------------------------- Section Description -------------------------- */
-.description-title{
-       font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color:var(--color-black-text)
+
+.description-container {
+  padding: 94px 15px;
+}
+
+.description-list {
+  display: flex;
+  gap: 30px;
+}
+.description-item{
+  max-width: 270px;
+}
+.description-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--color-black-text);
 }
 
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------ Section About ----------------------------- */
-.section-title{
-    font-family: var(--main-font-family);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--color-black-text);
+.about-container {
+  padding-bottom: 94px;
+}
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--color-black-text);
 }
 /* -------------------------------------------------------------------------- */
 
 /* ------------------------------ Section Team ------------------------------ */
-.team{
-    background-color: var(--color-grey-button);
+.team {
+  background-color: var(--color-grey-button);
+}
+.team-container{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team-list{
+  display: flex;
+  gap: 30px;
+}
+
+.team-item{ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-white-text);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-box{
-    background-color: var(--color-white-text);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  padding: 30px 0;
 }
 .team-title,
-.team-text{
-    font-size: 16px;
-    line-height: calc(19 / 16);
-    text-align: center;
-    color: var(--color-grey-text);
+.team-text {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: var(--color-grey-text);
 }
-.team-title{
-    font-weight: 500;
-    color: var(--color-black-text);
+.team-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--color-black-text);
 }
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- Section Footer ----------------------------- */
-.footer{
-    background-color: var(--color-grey-bgn);
+.footer {
+  background-color: var(--color-grey-bgn);
 }
-.address-style{font-style: inherit;
-    color: var(--color-grey-footer-text);}
-.address-link{
-    color: var(--color-white-text);
+.footer-container{
+  padding: 60px 15px;
 }
-/* -------------------------------------------------------------------------- */
+.address-style {
+  font-style: inherit;
+  color: var(--color-grey-footer-text);
+  margin-top: 20px;
+}
+.address-link {
+  color: var(--color-white-text);
+}
+.footer-item{
+  margin-bottom: 9px;
+}
+.footer-item:last-child{
+  margin-bottom: 0;
+}
 
+/* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                               Page Portfolio                               */
 /* -------------------------------------------------------------------------- */
-.btn{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26 / 16);
-    text-align: center;
-    background:var(--color-grey-button);
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    margin-bottom: 20px;
+.btn {  
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  background: var(--color-grey-button);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  padding: 6px 22px;
 }
-.btn.current{
-    background: var(--color-main-blue);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    color: var(--color-white-text);
+.btn.current {
+  background: var(--color-main-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: var(--color-white-text);
 }
 .btn:hover,
-.btn:focus{
-    background-color: var(--color-main-blue);
-    color: var(--color-white-text);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.btn:focus {
+  background-color: var(--color-main-blue);
+  color: var(--color-white-text);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ------------------------------ Section Menu ------------------------------ */
-.product-list-item{
-    background: var(--color-white-text);
-    border: 1px solid #EEEEEE;
-    margin-bottom: 10px;
+
+.product-btn-list{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-top: 117px;
+  padding-bottom: 50px;
 }
-.product-title{
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    letter-spacing: 0.06em;
-    color: var(--color-black-text);
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 71px;
 }
-.product-link{
-    font-size: 16px;
-    line-height: calc(30 / 16);
+.product-list-item {
+  width: 370px;
+  background: var(--color-white-text);
+  border: 1px solid #eeeeee;
+}
+.product-box{
+  padding: 20px 24px;
+}
+.product-title {
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--color-black-text);
+}
+.product-text{
+
+}
+.product-link {
+  font-size: 16px;
+  line-height: calc(30 / 16);
 }
