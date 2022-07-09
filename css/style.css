@@ -13,7 +13,9 @@
   --second-font-family: 'Raleway', sans-serif;
 }
 /* ------------------------------- base styles ------------------------------ */
-img{display: block;}
+img {
+  display: block;
+}
 .container {
   width: 1200px;
   margin-left: auto;
@@ -28,7 +30,7 @@ img{display: block;}
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -83,14 +85,15 @@ body {
 /* -------------------------------------------------------------------------- */
 
 /* ----------------------------- Header Section ----------------------------- */
-.header{  border: 1px solid #ECECEC}
+.header {
+  border: 1px solid #ececec;
+}
 .header-list-gap {
   gap: 50px;
 }
 .header-nav {
   display: flex;
   align-items: center;
-
 }
 .nav-logo {
   margin-right: 93px;
@@ -175,7 +178,7 @@ body {
   display: flex;
   gap: 30px;
 }
-.description-item{
+.description-item {
   max-width: 270px;
 }
 .description-title {
@@ -214,20 +217,22 @@ body {
 .team {
   background-color: var(--color-grey-button);
 }
-.team-container{
+.team-container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.team-list{
+.team-list {
   display: flex;
   gap: 30px;
 }
 
-.team-item{ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--color-white-text);
   border-radius: 0px 0px 4px 4px;
 }
-.team-box{
+.team-box {
   padding: 30px 0;
 }
 .team-title,
@@ -248,7 +253,7 @@ body {
 .footer {
   background-color: var(--color-grey-bgn);
 }
-.footer-container{
+.footer-container {
   padding: 60px 15px;
 }
 .address-style {
@@ -259,10 +264,10 @@ body {
 .address-link {
   color: var(--color-white-text);
 }
-.footer-item{
+.footer-item {
   margin-bottom: 9px;
 }
-.footer-item:last-child{
+.footer-item:last-child {
   margin-bottom: 0;
 }
 
@@ -271,7 +276,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                               Page Portfolio                               */
 /* -------------------------------------------------------------------------- */
-.btn {  
+.btn {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
@@ -299,14 +304,14 @@ body {
 }
 /* ------------------------------ Section Menu ------------------------------ */
 
-.product-btn-list{
+.product-btn-list {
   display: flex;
   gap: 8px;
   justify-content: center;
   padding-top: 117px;
   padding-bottom: 50px;
 }
-.product-list{
+.product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -317,7 +322,7 @@ body {
   background: var(--color-white-text);
   border: 1px solid #eeeeee;
 }
-.product-box{
+.product-box {
   padding: 20px 24px;
 }
 .product-title {
@@ -328,9 +333,6 @@ body {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--color-black-text);
-}
-.product-text{
-
 }
 .product-link {
   font-size: 16px;
