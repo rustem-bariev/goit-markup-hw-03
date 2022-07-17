@@ -5,10 +5,12 @@
   --color-black-text: #212121;
   --color-white-text: #ffffff;
   --color-grey-footer-text: rgba(255, 255, 255, 0.6);
+  --color-footer-icon:rgba(255, 255, 255, 0.1);
+  --color-bg-footer:rgba(47, 48, 58, 0.4);
   --color-grey-bgn: #2f303a;
   --color-grey-button: #f5f4fa;
   --color-logo-black: #000000;
-
+  --color-social-icon:#AFB1B8;
   /* Card-set */
   --main-card-gap:30px;
   --card-item:3;
@@ -42,6 +44,14 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.socials-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 /* -- reset -- */
 h1,
@@ -133,6 +143,10 @@ body {
   margin-left: auto;
   gap: 50px;
 }
+.header-icon{
+fill: currentColor;
+margin-right: 10px;
+}
 .nav-link,
 .contact-link {
   display: flex;
@@ -156,9 +170,18 @@ body {
 /* -- Hero Section -- */
 .hero {
   padding-top: 200px;
-  padding-bottom: 280px;
-  background-color: var(--color-grey-bgn);
+  padding-bottom: 200px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:var(--color-bg-footer);
+  background-image: 
+  linear-gradient(to top, var(--color-bg-footer),var(--color-bg-footer)),url(../images/Hero-section/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
+
 }
 
 .hero-title {
@@ -206,6 +229,16 @@ body {
   text-transform: uppercase;
   color: var(--color-black-text);
 }
+.description-icon-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color:var(--color-grey-button);
+}
 
 
 
@@ -234,14 +267,13 @@ body {
 }
 
 .team-item {
-  max-width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--color-white-text);
   border-radius: 0px 0px 4px 4px;
 }
 .team-box {
-  padding: 30px 0;
+  padding: 30px;
 }
 .team-title,
 .team-text {
@@ -255,15 +287,64 @@ body {
   font-weight: 500;
   color: var(--color-black-text);
 }
+.team-text{margin-bottom: 16px;}
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-white{ color: var(--color-social-icon);
+  background-color:var(--color-white-text);}
+.socials-icon{
+  fill:currentColor;
+}
+.socials-link:hover,
+.socials-link:focus{
+  background-color:var(--color-main-blue);
+  color:var(--color-white-text);
+}
+
+/* -- Section Client -- */
+.client-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.client-link{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--color-social-icon);
+  border-radius: 4px;
+  color: var(--color-social-icon);
+}
+.client-icon{
+  fill: currentColor;
+}
+.client-link:hover,
+.client-link:focus{
+  color: var(--color-main-blue);
+  border-color: var(--color-main-blue);
+}
 
 /* -- Section Footer -- */
 .footer {
   background-color: var(--color-grey-bgn);
-  padding: 60px 15px;
+  padding: 60px 0;
 }
 .footer .logo{
   display: block;
   margin-bottom: 20px;
+}
+.footer-container{
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
 }
 .footer-list{
   display: flex;
@@ -281,7 +362,19 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
+.footer-text{
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--color-white-text);
+}
+.footer-icons{
+  display: flex;
+  flex-direction: column;
+}
+.socials-dark{
+  background-color:var(--color-footer-icon);
+  color: var(--color-white-text);
+}
 
 
   /* ---------- Page Portfolio ----------*/
@@ -317,14 +410,14 @@ body {
 /* -- Section Menu -- */
 
 .product{
-  padding-top: 117px;
-  padding-bottom: 71px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .product-btn-list {
   display: flex;
   gap: 8px;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .product-item {
@@ -347,3 +440,4 @@ body {
   font-size: 16px;
   line-height: calc(30 / 16);
 }
+
